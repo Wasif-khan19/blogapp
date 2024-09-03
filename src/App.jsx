@@ -1,7 +1,7 @@
 
 function App() {
   
-  console.log(import.meta.env.VITE_APPWRITE_BACKEND_URL);
+  console.log(import.meta.env.VITE_APPWRITE_BACKEND_ENDPOINT);
   
   return (
     <>
