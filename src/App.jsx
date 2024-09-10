@@ -1,13 +1,38 @@
+import { useEffect } from "react";
+import { useState } from "react";
+import { useDispatch } from "react-redux";
+import authService from "./appwrite/auth";
+import {login, logout} from './redux/authSlice'
+import Header from "./components/shared/Header";
+import Footer from "./components/shared/Footer";
 
 function App() {
-  
-  console.log(import.meta.env.VITE_APPWRITE_BACKEND_ENDPOINT);
-  
-  return (
-    <>
-      <h1 className="text-5xl text-white font-bold">..wasif</h1>
-    </>
-  );
+  const [loading, setLoading] = useState(true);
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    authService.getCurrentUser()
+    .then((userData) => {
+      if (userData) {
+        dispatch(login({userData}));
+      }else{
+        dispatch(logout());
+      }
+    })
+    .finally(() => {
+      setLoading(false);
+    });
+  }, []);
+  return !loading? (
+    <div>
+      <h1 className="text-white">Muhammad</h1>
+      <div>
+       <Header/>
+       {/* outlet from redux will display here */}
+       <Footer/>
+      </div>
+    </div>
+  ):(null)
 }
 
 export default App;
