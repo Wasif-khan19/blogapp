@@ -1,3 +1,4 @@
+import Container from "../container/Container";
 import Footer from "../shared/Footer";
 import Header from "../shared/Header";
 
@@ -7,6 +8,7 @@ const Layout = () => {
     <div>
      <Header/>
      <Footer/>
+     <Container/>
     </div>
   );
 };

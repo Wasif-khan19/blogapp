@@ -1,8 +1,9 @@
 
 
 function Header() {
+  
   return (
-    <div>Header</div>
+    <div className="text-black">Header</div>
   )
 }
 

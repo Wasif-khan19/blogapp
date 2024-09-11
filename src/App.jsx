@@ -24,8 +24,7 @@ function App() {
     });
   }, []);
   return !loading? (
-    <div>
-      <h1 className="text-white">Muhammad</h1>
+    <div className="bg-white">
       <div>
        <Header/>
        {/* outlet from redux will display here */}
