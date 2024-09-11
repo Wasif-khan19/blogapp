@@ -1,4 +1,4 @@
-import Container from "../container/Container";
+import LogoutButton from "@/layoutbuttons/LogoutButton";
 import Footer from "../shared/Footer";
 import Header from "../shared/Header";
 
@@ -8,7 +8,7 @@ const Layout = () => {
     <div>
      <Header/>
      <Footer/>
-     <Container/>
+     <LogoutButton/>
     </div>
   );
 };
