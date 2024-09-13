@@ -1,11 +1,11 @@
 import { Dot, LogOut, User } from "lucide-react";
 import { useEffect, useState } from "react";
 import { useSelector } from "react-redux";
-import { useNavigate } from "react-router-dom";
 import { Button } from "../ui/button";
 import { Popover, PopoverContent, PopoverTrigger } from "../ui/popover";
 import { Avatar, AvatarImage } from "../ui/avatar";
-import LogoutButton from "@/layoutbuttons/LogoutButton";
+import LogoutButton from "@/components/shared/layoutbuttons/LogoutButton";
+import { useNavigate } from "react-router-dom";
 
 function Header() {
   const navigate = useNavigate();
@@ -75,7 +75,7 @@ function Header() {
               {navItems?.map((items) =>
                 items.active ? (
                   <li key={items.title}>
-                    <div onClick={()=>navigate(items.link)}>
+                    <div onClick={()=> navigate(items.link)}>
                     <Button>{items.title}</Button>
                     </div>
                   </li>
