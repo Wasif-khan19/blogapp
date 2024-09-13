@@ -1,11 +1,11 @@
-import authService from "@/appwrite/auth";
+import authService from "../../appwrite/auth";
 import { useState } from "react";
 import { useForm } from "react-hook-form";
 import { useDispatch } from "react-redux";
 import { Link, useNavigate } from "react-router-dom";
 import { login as authLogin } from "../../redux/authSlice";
-import { Button } from "../ui/button";
-import { Input } from "../ui/input";
+import Input from "../ui/Input";
+import Button from "../ui/Button";
 
 function Login() {
   const navigate = useNavigate();

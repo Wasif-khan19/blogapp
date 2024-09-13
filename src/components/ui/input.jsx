@@ -1,19 +1,30 @@
-import * as React from "react"
+/* eslint-disable react/prop-types */
+import React, {useId} from 'react'
 
-import { cn } from "@/lib/utils"
-
-const Input = React.forwardRef(({ className, type, ...props }, ref) => {
-  return (
-    (<input
-      type={type}
-      className={cn(
-        "flex h-9 w-full rounded-md border border-input bg-transparent px-3 py-1 text-sm shadow-sm transition-colors file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:cursor-not-allowed disabled:opacity-50",
-        className
-      )}
-      ref={ref}
-      {...props} />)
-  );
+const Input = React.forwardRef( function Input({
+    label,
+    type = "text",
+    className = "",
+    ...props
+}, ref){
+    const id = useId()
+    return (
+        <div className='w-full'>
+            {label && <label 
+            className='inline-block mb-1 pl-1' 
+            htmlFor={id}>
+                {label}
+            </label>
+            }
+            <input
+            type={type}
+            className={`px-3 py-2 rounded-lg bg-white text-black outline-none focus:bg-gray-50 duration-200 border border-gray-200 w-full ${className}`}
+            ref={ref}
+            {...props}
+            id={id}
+            />
+        </div>
+    )
 })
-Input.displayName = "Input"
 
-export { Input }
+export default Input

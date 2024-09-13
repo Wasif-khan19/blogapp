@@ -1,7 +1,7 @@
 /* eslint-disable no-unused-vars */
-import authService from "@/appwrite/auth";
-import { Button } from "@/components/ui/button";
-import { logout } from "@/redux/authSlice";
+import authService from "../../../appwrite/auth";
+import Button from "../../ui/Button";
+import { logout } from "../../../redux/authSlice";
 import { useDispatch } from "react-redux";
 
 function LogoutButton() {

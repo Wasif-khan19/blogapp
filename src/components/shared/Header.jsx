@@ -1,11 +1,11 @@
 import { Dot, LogOut, User } from "lucide-react";
 import { useEffect, useState } from "react";
 import { useSelector } from "react-redux";
-import { Button } from "../ui/button";
 import { Popover, PopoverContent, PopoverTrigger } from "../ui/popover";
 import { Avatar, AvatarImage } from "../ui/avatar";
-import LogoutButton from "@/components/shared/layoutbuttons/LogoutButton";
+import LogoutButton from "../../components/shared/layoutbuttons/LogoutButton";
 import { useNavigate } from "react-router-dom";
+import Button from "../ui/Button";
 
 function Header() {
   const navigate = useNavigate();
