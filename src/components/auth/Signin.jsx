@@ -4,8 +4,6 @@ import { useDispatch } from 'react-redux'
 import { Link, useNavigate } from 'react-router-dom'
 import authService from '../../appwrite/auth'
 import { login } from '../../redux/authSlice'
-import Input from '../ui/Input'
-import Button from '../ui/Button'
 
 
 function Signin() {
@@ -48,14 +46,14 @@ function Signin() {
 
                 <form onSubmit={handleSubmit(create)}>
                     <div className='space-y-5'>
-                        <Input
+                        <input
                         label="Full Name: "
                         placeholder="Enter your full name"
                         {...register("name", {
                             required: true,
                         })}
                         />
-                        <Input
+                        <input
                         label="Email: "
                         placeholder="Enter your email"
                         type="email"
@@ -67,16 +65,16 @@ function Signin() {
                             }
                         })}
                         />
-                        <Input
+                        <input
                         label="Password: "
                         type="password"
                         placeholder="Enter your password"
                         {...register("password", {
                             required: true,})}
                         />
-                        <Button type="submit" className="w-full">
+                        <button type="submit" className="w-full">
                             Create Account
-                        </Button>
+                        </button>
                     </div>
                 </form>
             </div>

@@ -30,7 +30,7 @@ function App() {
        <Header/>
        {/* outlet from redux will display here */}
        <Outlet/>
-       <Footer/>
+      
       </div>
     </div>
   ):(null)

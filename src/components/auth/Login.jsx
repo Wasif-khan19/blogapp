@@ -4,8 +4,6 @@ import { useDispatch } from "react-redux";
 import { Link, useNavigate } from "react-router-dom";
 import authService from "../../appwrite/auth";
 import { login as authLogin } from "../../redux/authSlice";
-import Input from "../ui/Input";
-import Button from "../ui/Button";
 
 function Login() {
   const navigate = useNavigate();
@@ -49,7 +47,7 @@ function Login() {
       {error && <p className="text-red-600 mt-8 text-center">{error}</p>}
       <form onSubmit={handleSubmit(login)} className="mt-8">
         <div className="space-y-5">
-          <Input
+          <input
             label="Email: "
             placeholder="Enter your email"
             type="email"
@@ -62,7 +60,7 @@ function Login() {
               },
             })}
           />
-          <Input
+          <input
             label="Password: "
             type="password"
             placeholder="Enter your password"
@@ -70,9 +68,9 @@ function Login() {
               required: true,
             })}
           />
-          <Button type="submit" className="w-full">
+          <button type="submit" className="w-full">
             Sign in
-          </Button>
+          </button>
         </div>
       </form>
     </div>

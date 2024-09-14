@@ -3,7 +3,7 @@
 
 function Container({children}) {
   return (
-    <div className='w-full max-w-7xl max-auto px-4'> 
+    <div className='w-full max-w-8xl max-auto px-4'> 
     {children}
     </div>
   )
