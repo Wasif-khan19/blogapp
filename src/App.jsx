@@ -28,7 +28,7 @@ function App() {
       <div>
        <Header/>
        {/* outlet from redux will display here */}
-       <Footer/>
+ 
       </div>
     </div>
   ):(null)

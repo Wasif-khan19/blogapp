@@ -1,8 +1,7 @@
 /* eslint-disable no-unused-vars */
-import authService from "../../../appwrite/auth";
-import Button from "../../ui/Button";
-import { logout } from "../../../redux/authSlice";
 import { useDispatch } from "react-redux";
+import authService from "../../../appwrite/auth";
+import { logout } from "../../../redux/authSlice";
 
 function LogoutButton() {
     
@@ -15,9 +14,9 @@ function LogoutButton() {
   };
 
   return(
-    <Button>
+    <button onClick={handleLogout}>
         Log out
-    </Button>
+    </button>
   )
 }
 

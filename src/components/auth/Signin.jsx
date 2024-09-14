@@ -1,13 +1,14 @@
-import authService from '../../appwrite/auth'
-import { login } from '../../redux/authSlice'
 import { useState } from 'react'
 import { useForm } from 'react-hook-form'
 import { useDispatch } from 'react-redux'
 import { Link, useNavigate } from 'react-router-dom'
+import authService from '../../appwrite/auth'
+import { login } from '../../redux/authSlice'
 import Input from '../ui/Input'
 import Button from '../ui/Button'
 
-function Signup() {
+
+function Signin() {
     const navigate = useNavigate()
     const [error, setError] = useState("")
     const dispatch = useDispatch()
@@ -32,7 +33,7 @@ function Signup() {
             <div className={`mx-auto w-full max-w-lg bg-gray-100 rounded-xl p-10 border border-black/10`}>
             <div className="mb-2 flex justify-center">
                     <span className="inline-block w-full max-w-[100px]">
-                        Hi
+                        wasif
                     </span>
                 </div>
                 <h2 className="text-center text-2xl font-bold leading-tight">Sign up to create account</h2>
@@ -86,4 +87,4 @@ function Signup() {
   )
 }
 
-export default Signup
+export default Signin
