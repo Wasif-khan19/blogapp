@@ -5,6 +5,7 @@ import authService from "./appwrite/auth";
 import {login, logout} from './redux/authSlice'
 import Header from "./components/shared/Header";
 import Footer from "./components/shared/Footer";
+import { Outlet } from "react-router-dom";
 
 function App() {
   const [loading, setLoading] = useState(true);
@@ -28,7 +29,8 @@ function App() {
       <div>
        <Header/>
        {/* outlet from redux will display here */}
- 
+       <Outlet/>
+       <Footer/>
       </div>
     </div>
   ):(null)

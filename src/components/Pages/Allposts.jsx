@@ -6,7 +6,7 @@ import PostCard from '../ui/PostCard';
 function AllPosts() {
     const [posts, setPosts] = useState([])
     useEffect(() => {}, [])
-    appwriteService.getPosts([]).then((posts) => {
+    appwriteService.getPost([]).then((posts) => {
         if (posts) {
             setPosts(posts.documents)
         }

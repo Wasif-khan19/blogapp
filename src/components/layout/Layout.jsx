@@ -26,7 +26,6 @@ const Layout = () => {
         <Button/>
         <PostForm/>
         <PostCard/>
-    
         <Input/>
         <Select/>
     </div>
