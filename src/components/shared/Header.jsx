@@ -16,17 +16,18 @@ function Header() {
       className: "",
     },
     {
-      name: "Login",
+      name: "LOGIN",
       slug: "/login",
       active: !authStatus,
       variant: "outline",
-      className: "",
+      className: "border-black ",
     },
     {
-      name: "Signup",
+      name: "SIGNUP",
       slug: "/signup",
       active: !authStatus,
-      className: "",
+      variant: "secondary",
+      className: "bg-[#57e44b] hover:bg-[#77d86e] text-[#122315] font-bold",
     },
     {
       name: "All Posts",
@@ -47,7 +48,11 @@ function Header() {
       <Container>
         <nav className="flex">
           <div className="mr-4">
-            <Link to="/">abc</Link>
+            <Link to="/" className="items-center text-center text-lg">
+              <h1 className="text-[#122315] font-bold">
+                Inspire<span className="text-[#57e44b]">Hub</span>
+              </h1>
+            </Link>
           </div>
           <ul className="flex ml-auto">
             {navItems.map((item) =>
