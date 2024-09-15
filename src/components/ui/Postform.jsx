@@ -111,7 +111,7 @@ export default function PostForm({ post }) {
                 <select
                     
                     label="Status"
-                    className="mb-4"
+                    className="mb-4 py-10 px-10"
                     {...register("status", { required: true })}
                 />
                 <button type="submit"  className="w-full">

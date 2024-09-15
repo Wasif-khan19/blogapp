@@ -1,12 +1,11 @@
 /* eslint-disable react/prop-types */
 
-
-function Container({children}) {
+const Container = ({ children, className = '' }) => {
   return (
-    <div className='w-full max-w-8xl max-auto px-4'> 
-    {children}
+    <div className={`container mx-auto px-4 sm:px-6 lg:px-8 bg-background text-foreground ${className}`}>
+      {children}
     </div>
-  )
-}
+  );
+};
 
-export default Container
+export default Container;
